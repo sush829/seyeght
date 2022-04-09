@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to sEYEght. We are the future of peer-to-peer, crowdsourced detection and reporting of unknown or unwanted anomalies worldwide.
         </p>
         <a
           className="App-link"
