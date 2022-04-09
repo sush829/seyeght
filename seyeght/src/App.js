@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 
 function App() {
@@ -9,14 +9,7 @@ function App() {
         <p>
           Welcome to sEYEght. We are the future of peer-to-peer, crowdsourced detection and reporting of unknown or unwanted anomalies worldwide.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
     </div>
   );
