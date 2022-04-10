@@ -6,9 +6,9 @@ import '../App.css';
 function Navbar() {
     return (
         <div className="navbar">
-          <div className="App-logo"><a href=""><img src={logo} className="App-logo" alt="logo" /></a></div>
-          <a className="nav-link" href=""><div className="nav-item">Login</div></a>
-          <a className="nav-link" href=""><div className="nav-item">Logout</div></a>
+          <div className="App-logo"><img src={logo} className="App-logo" alt="logo" /></div>
+          <div className="nav-item">Login</div>
+          <div className="nav-item">Logout</div>
         </div>
     )
 }
