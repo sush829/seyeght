@@ -1,6 +1,6 @@
 import React from "react"
-import logo from './logo.png';
-import './App.css';
+import logo from '../logo.png';
+import '../App.css';
 
 
 function Navbar() {
@@ -15,4 +15,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
