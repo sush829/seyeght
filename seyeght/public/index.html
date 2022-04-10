@@ -24,11 +24,54 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
     <title>React App</title>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
   </head>
-  <body>
+  <body style="background: black">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+
+    </div>
+
+    <div id="map" style="height: 100vh; width: 70vw"></div>
+    <script type="text/javascript">
+
+
+
+
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-84.555534, 42.732536]),
+          zoom: 10
+        })
+      });
+
+       // add points
+      var marker = new ol.Feature({
+          geometry: new ol.geom.Point(
+            ol.proj.fromLonLat([-84.555534, 42.732536])
+          ),
+        });
+
+      var vectorSource = new ol.source.Vector({
+          features: [marker]
+        });
+
+      var markerVectorLayer = new ol.layer.Vector({
+        source: vectorSource,
+      });
+      map.addLayer(markerVectorLayer);
+    </script>
+
+    <!--<script src="../src/components/MapBase.js" type="module"></script>-->
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
