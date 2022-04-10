@@ -1,16 +1,12 @@
 import logo from './logo.png';
 import './App.css';
+import Navbar from './Navbar.js';
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ul className="nav-links">
-          <li className="nav-item">Login</li>
-          <li className="nav-item">Logout</li>
-        </ul>
-      </nav>
+      <Navbar />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
