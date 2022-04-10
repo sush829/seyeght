@@ -39,29 +39,21 @@
 
 
 .navbar {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   background: #282c34;
   color: #61dafb;
+  border-bottom: 2px solid grey;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
+.nav-link {
+  color: #61dafb;
+  text-decoration: none;
 }
 
 .nav-item {
-  display: flex;
-  align-item: stretch;
-}
-
-.nav-item a {
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #61dafb;
+  padding: 20px;
 }
 
 .nav-item:hover {
@@ -69,5 +61,6 @@
 }
 
 .App-logo {
-  height: 20px;
+  height: 50px;
+  margin-right: auto;
 }

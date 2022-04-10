@@ -5,13 +5,11 @@ import '../App.css';
 
 function Navbar() {
     return (
-        <nav className="navbar">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ul className="nav-links">
-          <li className="nav-item">Login</li>
-          <li className="nav-item">Logout</li>
-        </ul>
-      </nav>
+        <div className="navbar">
+          <div className="App-logo"><a href=""><img src={logo} className="App-logo" alt="logo" /></a></div>
+          <a className="nav-link" href=""><div className="nav-item">Login</div></a>
+          <a className="nav-link" href=""><div className="nav-item">Logout</div></a>
+        </div>
     )
 }
 
