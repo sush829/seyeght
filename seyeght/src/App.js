@@ -5,10 +5,10 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <a href="#"><img src={logo} className="App-logo" alt="logo" /></a>
+        <img src={logo} className="App-logo" alt="logo" />
         <ul className="nav-links">
-          <li className="nav-item"><a href="#">Login</a></li>
-          <li className="nav-item"><a href="#">Logout</a></li>
+          <li className="nav-item">Login</li>
+          <li className="nav-item">Logout</li>
         </ul>
       </nav>
       <header className="App-header">
