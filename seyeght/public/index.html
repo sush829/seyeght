@@ -27,15 +27,40 @@
 
     <title>React App</title>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      #button-container {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #addform {
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+        color: #61dafb;
+        background: black;
+        border: solid 2px #61dafb;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      #addform:hover {
+        border: solid 0px grey;
+      }
+    </style>
   </head>
   <body style="background: black">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
     <div id="map" style="height: 70vh; width: 70vw; margin: auto"></div>
-    <div style="text-align: center; padding: 10px">
-      <button>Add Report</button>
-    </div>
+    <!--<div id="button-container">
+      <<button id="addform">Add Report</button>
+    </div>-->
+    <center><button id="addform">Add Report</button></center>
 
     <script type="text/javascript">
       var map = new ol.Map({
