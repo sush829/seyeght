@@ -30,39 +30,42 @@
   </head>
   <body style="background: black">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
+    <div id="root"></div>
 
-    </div>
-
-    <div id="map" style="height: 100vh; width: 70vw"></div>
+    <div id="map" style="height: 70vh; width: 70vw; margin: auto"></div>
+    <button type="button" style="margin: auto">Add Report!</button>
     <script type="text/javascript">
-
-
-
-
       var map = new ol.Map({
-        target: 'map',
+        target: "map",
         layers: [
           new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
+            source: new ol.source.OSM(),
+          }),
         ],
         view: new ol.View({
           center: ol.proj.fromLonLat([-84.555534, 42.732536]),
-          zoom: 10
-        })
+          zoom: 10,
+        }),
       });
 
-       // add points
+      // add points
       var marker = new ol.Feature({
-          geometry: new ol.geom.Point(
-            ol.proj.fromLonLat([-84.555534, 42.732536])
-          ),
-        });
+        geometry: new ol.geom.Point(
+          ol.proj.fromLonLat([-84.555534, 42.732536])
+        ),
+      });
+
+      var marker2 = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([-84.8, 42.4])),
+      });
+
+      var marker3 = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([-84.6, 42.732536])),
+      });
 
       var vectorSource = new ol.source.Vector({
-          features: [marker]
-        });
+        features: [marker, marker2, marker3],
+      });
 
       var markerVectorLayer = new ol.layer.Vector({
         source: vectorSource,
